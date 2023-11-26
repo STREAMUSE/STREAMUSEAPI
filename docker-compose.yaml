@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=StreamUse01
+    volumes:
+      - ./db:/var/opt/mssql/data
+    ports:
+      - 1433:1433
+
+  cache:
+    image: redis:alpine
+    depends_on:
+      - db
+    ports:
+      - 6379:6379
