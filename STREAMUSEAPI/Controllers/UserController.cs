@@ -6,10 +6,9 @@ using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using STREAMUSEAPI.Extensions;
 using STREAMUSEAPI.Models;
+using STREAMUSEAPI.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
 using System.Text.Json;
 
 namespace STREAMUSEAPI.Controllers
@@ -38,7 +37,7 @@ namespace STREAMUSEAPI.Controllers
         public async Task<ActionResult<string>> SingIn(UserDTO user)
         {
             if (await context.Users.FirstOrDefaultAsync(u => u.Username == user.Username
-                && u.Password == HashPassword(user.Password)) is not User loginUser)
+                && u.Password == AuthOption.HashPassword(user.Password)) is not User loginUser)
             {
                 Log.Warning("Username or password uncorrected");
                 return BadRequest();
@@ -58,7 +57,7 @@ namespace STREAMUSEAPI.Controllers
             await context.Users.AddAsync(new User
             {
                 Username = user.Username,
-                Password = HashPassword(user.Password)
+                Password = AuthOption.HashPassword(user.Password)
             });
             await context.SaveChangesAsync();
             Log.Information("User added");
@@ -126,7 +125,6 @@ namespace STREAMUSEAPI.Controllers
             return new JwtSecurityTokenHandler().WriteToken(jwt);
         }
 
-        private static string HashPassword(in string password)
-            => Convert.ToBase64String(SHA256.HashData(Encoding.UTF8.GetBytes(password)));
+
     }
 }

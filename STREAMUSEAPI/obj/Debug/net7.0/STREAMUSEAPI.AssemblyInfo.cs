@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("STREAMUSEAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ead4df00cedd2f6606b8fd7728ef84ae399b65a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("STREAMUSEAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("STREAMUSEAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

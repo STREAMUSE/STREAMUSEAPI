@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace STREAMUSEAPI.Models
+namespace STREAMUSEAPI.Services
 {
     public class AuthOption
     {
@@ -12,5 +12,8 @@ namespace STREAMUSEAPI.Models
 
         public static SymmetricSecurityKey GetSymmetricSecurityKey()
             => new(SHA256.HashData(Encoding.UTF8.GetBytes(KEY)));
+
+        public static string HashPassword(in string password)
+            => Convert.ToBase64String(SHA256.HashData(Encoding.UTF8.GetBytes(password)));
     }
 }

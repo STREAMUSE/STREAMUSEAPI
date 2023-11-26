@@ -85,3 +85,4 @@ C:\Users\b4shtirk1n\source\repos\STREAMUSEAPI\STREAMUSEAPI\obj\Debug\net7.0\STRE
 C:\Users\b4shtirk1n\source\repos\STREAMUSEAPI\STREAMUSEAPI\obj\Debug\net7.0\STREAMUSEAPI.genruntimeconfig.cache
 C:\Users\b4shtirk1n\source\repos\STREAMUSEAPI\STREAMUSEAPI\obj\Debug\net7.0\ref\STREAMUSEAPI.dll
 C:\Users\b4shtirk1n\source\repos\STREAMUSEAPI\STREAMUSEAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\b4shtirk1n\source\repos\STREAMUSEAPI\STREAMUSEAPI\obj\Debug\net7.0\STREAMUSEAPI.sourcelink.json

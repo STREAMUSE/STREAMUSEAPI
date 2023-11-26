@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using STREAMUSEAPI.Models;
 using STREAMUSEAPI.Filters;
+using STREAMUSEAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
