@@ -61,6 +61,7 @@ namespace STREAMUSEAPI.Controllers
             });
             await context.SaveChangesAsync();
             Log.Information("User added");
+
             return Ok();
         }
 
