@@ -1,5 +1,12 @@
 #!/bin/sh
 
+protected_branch='master'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+RED='\033[0;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
 if [[ $current_branch = $protected_branch ]] ; then
     echo -e "${YELLOW}Running pre push to master check...${NC}"
     
